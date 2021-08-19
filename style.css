@@ -1,0 +1,41 @@
+body {
+    font-size: 16px;
+    color: #fdfffc;
+    background-color: #021f36e1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+  h1 {
+    color: #fdfffc;
+    font-weight: 600;
+  }
+  p {
+    color: #fdfffc;
+
+  }
+  img {
+    border-radius: 100%;
+  }
+  .h2 {
+    color: #ff9500;
+  }
+  .h3 {
+    color: rgb(245, 164, 135);
+  }
+  .listanaoordenada {
+    
+  }
+  .listadelinks {
+    color: #fdfffc;
+    text-decoration: underline;
+    
+  }
+        
+  #minhacidade {
+    color: rgb(141, 233, 50);
+  }
+  .importante {
+    font-size: 24px;
+  }
+  .indicelinks {
+    color: #fffcfc9a ;
+  }
