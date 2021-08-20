@@ -40,13 +40,22 @@ h2 {
     opacity: 0.7;
 }
 
+.listadelinks {
+  color: #fdfffc;
+}
+
 h3 {
-  color: #ff9500
   text-align: center;
 }
 
-
+.linkindicedepagina {
+  color: #fdfffc;
+  font-weight: lighter;
+  font-size: small;
+}
 
 #rodape {
       text-align: center;
-      }
+      font-weight: lighter;
+      font-size: small;
+    }
