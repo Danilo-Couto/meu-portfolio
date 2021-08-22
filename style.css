@@ -5,9 +5,10 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 h1 {
+  text-align: center  ;
   color: #fdfffc;
   font-weight: 600;
-  text-shadow: 2px 2px 4px #ff9500;
+  text-shadow: 2px 2px 4px #DE8787;
   text-decoration: underline;
   font-weight: bolder;
 }
@@ -17,27 +18,31 @@ p {
 }
 #minha_foto {
   border-radius: 100% ;
-  border:1px solid #ff9500;
-  box-shadow: 0px 0px 5px #ff9500;   
+  border:1px solid #012542e1;
+  box-shadow: 5px 10px 20px #012542e1;   
 }
 
 h2 {
-  color: #ff9500;
+  color: #DE8787;
   font-weight: bolder;
   text-decoration: underline;
 }
 
+#descricao {
+  color: #012542e1;
+}
 
 #minhacidade {
-  color: rgb(141, 233, 50);
+  color: 
 }
+
 .importante {
   font-weight: bold;
 }
 
 #under_construction_icon {
     width: 100px;
-    opacity: 0.7;
+    opacity:
 }
 
 .listadelinks {
@@ -55,7 +60,46 @@ h3 {
 }
 
 #rodape {
-      text-align: center;
-      font-weight: lighter;
-      font-size: small;
+    text-align: center;
+    font-weight: lighter;
     }
+
+div:nth-of-type(1) {
+  padding: 20px 20px 20px 20px;
+  background-color: #f3e9d7;
+}
+
+div:nth-of-type(2) {
+  margin-top: -230px;
+  margin-left: 250px;
+  margin-right: 10px;
+ 
+}
+
+div:nth-of-type(3) {
+  margin-top: 50px;
+}
+
+div:nth-last-of-type(5) {
+  margin-top: 20px;
+}
+
+div:nth-last-of-type(4) {
+  margin-top: 10px;
+}
+
+div :nth-last-of-type(5) {
+}
+
+ul {
+  margin-left: -1.5%;
+}
+
+#habilidades li:nth-child(odd) {
+  font-style: italic;
+  font-size: 2em;
+}
+
+/*
+
+Coloque estilo somente nos itens ímpares da lista das suas habilidades.
