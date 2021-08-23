@@ -36,8 +36,10 @@ h2 {
   color: 
 }
 
-.importante {
-  font-weight: bold;
+div:nth-of-type(4) li:nth-child(odd) {
+font-style: italic;
+font-size: 2em;
+font-weight: bold;
 }
 
 #under_construction_icon {
@@ -50,7 +52,7 @@ h2 {
 }
 
 h3 {
-  text-align: center;
+  text-align: left;
 }
 
 .linkindicedepagina {
@@ -59,18 +61,15 @@ h3 {
   font-size: small;
 }
 
-#rodape {
-    text-align: center;
-    font-weight: lighter;
-    }
 
 div:nth-of-type(1) {
   float:none ;
   padding: 20px 20px 20px 20px;
   background-color: #f3e9d7;
+  
 }
 
-div:nth-of-type(2) /*{
+div:nth-of-type(2)  /*{
   position: absolute;
   top:-370px;
   bottom: 0;
@@ -101,22 +100,28 @@ div:nth-of-type(3) {
   margin-top: ;
 }
 
-div:nth-last-of-type(5) {
-  margin-top: 20px;
-}
-
-div:nth-last-of-type(4) {
+div:nth-of-type(4) {
   margin-top: 10px;
 }
+div:nth-of-type(5) {
+  margin-top: 20px;
+}
+div:nth-of-type(6) {
+}
+div:nth-of-type(7) {
+  text-align: center;
 
-div :nth-last-of-type(5) {
+}
+div:nth-of-type(8) {
+  text-align: center;
 }
 
-ul {
-  margin-left: -1.5%;
+span {
+text-align: justify;
+text-size-adjust;
+margin-inline: 10px;
 }
 
-#habilidades li:nth-child(odd) {
-  font-style: italic;
-  font-size: 2em;
+hr {
+margin-top: 50px;
 }
