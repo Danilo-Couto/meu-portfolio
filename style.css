@@ -36,12 +36,6 @@ h2 {
   color: 
 }
 
-div:nth-of-type(4) li:nth-child(odd) {
-font-style: italic;
-font-size: 2em;
-font-weight: bold;
-}
-
 #under_construction_icon {
     width: 100px;
     opacity:
@@ -55,50 +49,58 @@ h3 {
   text-align: left;
 }
 
-.linkindicedepagina {
-  color: #fdfffc;
-  font-weight: lighter;
-  font-size: small;
-}
-
 div:nth-of-type(1) {
-margin-top: ;}
-
+}
   
 div:nth-of-type(2)  {
+  display: block;
   margin-top: -214px;
   padding: 5px 15px 15px 250px ;
   background-color: #f3e9d7;
   text-align: left;
-  position: flex;
-
 } 
 
 div:nth-of-type(3) {
-  margin-top: ;
 }
 
 div:nth-of-type(4) {
-  margin-top: 10px;
-}
-div:nth-of-type(5) {
-  margin-top: 20px;
-}
-div:nth-of-type(6) {
 }
 
-div:nth-of-type(7) {
+div:nth-of-type(4) li:nth-child(odd) {
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+  }
+  
+
+section:nth-of-type(1) {
+}
+
+section:nth-of-type(2) {
+}
+
+nav {
+  color: #fdfffc;
   text-align: center;
+  
 }
 
-div:nth-of-type(8) {
+ul {
+    color: #fdfffc;
+}
+
+nav ul li{
+  color: #fdfffc;
+  display: inline;
+  font-weight: lighter;
+  font-size: small;
+}
+
+footer {
   text-align: center;
 }
 
 span {
-text-align: justify;
-text-size-adjust;
-margin-inline: 10px;
 }
 
 hr {
