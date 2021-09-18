@@ -4,6 +4,7 @@ body {
   background-color: #012542e1;
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
+
 h1 {
   text-align: center  ;
   color: #fdfffc;
@@ -12,14 +13,17 @@ h1 {
   text-decoration: ;
   font-weight: bolder;
 }
+
 p {
   color: #fdfffc;
-
 }
+
 #minha_foto {
   border-radius: 100% ;
   border:1px solid #012542e1;
-  box-shadow: 5px 10px 20px #012542e1;   
+  box-shadow: 5px 10px 20px #012542e1; 
+  display: flex;
+    
 }
 
 h2 {
@@ -50,14 +54,19 @@ h3 {
 }
 
 div:nth-of-type(1) {
+  display: flex;
+
 }
   
 div:nth-of-type(2)  {
-  display: block;
+  display: flex;
   margin-top: -214px;
   padding: 5px 15px 15px 250px ;
   background-color: #f3e9d7;
-  text-align: left;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 200px;
 } 
 
 div:nth-of-type(3) {
