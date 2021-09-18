@@ -36,10 +36,6 @@ h2 {
   color: 
 }
 
-.importante {
-  font-weight: bold;
-}
-
 #under_construction_icon {
     width: 100px;
     opacity:
@@ -50,77 +46,63 @@ h2 {
 }
 
 h3 {
-  text-align: center;
+  text-align: left;
 }
 
-.linkindicedepagina {
+div:nth-of-type(1) {
+}
+  
+div:nth-of-type(2)  {
+  display: block;
+  margin-top: -214px;
+  padding: 5px 15px 15px 250px ;
+  background-color: #f3e9d7;
+  text-align: left;
+} 
+
+div:nth-of-type(3) {
+}
+
+div:nth-of-type(4) {
+}
+
+div:nth-of-type(4) li:nth-child(odd) {
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+  }
+  
+
+section:nth-of-type(1) {
+}
+
+section:nth-of-type(2) {
+}
+
+nav {
   color: #fdfffc;
+  text-align: center;
+  
+}
+
+ul {
+    color: #fdfffc;
+}
+
+nav ul li{
+  color: #fdfffc;
+  display: inline;
   font-weight: lighter;
   font-size: small;
 }
 
-#rodape {
-    text-align: center;
-    font-weight: lighter;
-    }
-
-div:nth-of-type(1) {
-  float:none ;
-  padding: 20px 20px 20px 20px;
-  background-color: #f3e9d7;
-}
-
-div:nth-of-type(2) /*{
-  position: absolute;
-  top:-370px;
-  bottom: 0;
-  left: 250px;
-  width: 80%;
-  height: 10%;
-  margin: auto;
-  padding: 10px 10px 10px 10px;
+footer {
   text-align: center;
-  line-height: ;
-  border: ;
-  display: inline-block;
-  vertical-align:middle;
-} 
-*/
-
-{display: inline-block;
-  width: ;
-  height: ;
-  margin-top: -275px;
-  margin-left: 250px;
-  vertical-align: middle;
-  line-height: ;
-  text-align: left;
 }
 
-div:nth-of-type(3) {
-  margin-top: ;
+span {
 }
 
-div:nth-last-of-type(5) {
-  margin-top: 20px;
+hr {
+margin-top: 50px;
 }
-
-div:nth-last-of-type(4) {
-  margin-top: 10px;
-}
-
-div :nth-last-of-type(5) {
-}
-
-ul {
-  margin-left: -1.5%;
-}
-
-#habilidades li:nth-child(odd) {
-  font-style: italic;
-  font-size: 2em;
-}
-
-/*
-
-Coloque estilo somente nos itens ímpares da lista das suas habilidades.
