@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { IProjectProps } from 'src/utils/interfaces';
-import SectionTitle from 'src/components/SectionTitle';
-import ProjectItem from 'src/components/HomeProjets/ProjectItem';
-import { SContainer } from 'src/components/HomeProjets/styles';
+import { IProjectProps } from '../../utils/interfaces';
+import SectionTitle from '../SectionTitle';
+import ProjectItem from './ProjectItem';
+import { SContainer } from './styles';
 
 export default function HomeProjects({ projects }) {
   return (

@@ -1,5 +1,5 @@
-import { STextContainer, SInfosContainer, SContainer } from 'src/components/HomeHero/styles';
 import picture from '../../../public/pessoa.webp';
+import { SContainer, SInfosContainer, STextContainer } from './styles';
 
 export default function HomeHero() {
   return (

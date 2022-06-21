@@ -1,5 +1,5 @@
-import { IExperienceProps } from 'src/Utils/interfaces';
-import { SItemContainer } from 'src/components/Experience/styles';
+import { IExperienceProps } from '../../utils/interfaces';
+import { SItemContainer } from './styles';
 
 export default function ExperienceItem({
   year,

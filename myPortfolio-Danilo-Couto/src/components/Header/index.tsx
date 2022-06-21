@@ -1,5 +1,5 @@
-import NavLink from 'src/components/Header/NavLink';
-import { SContainer } from 'src/components/Header/styles';
+import NavLink from './NavLink';
+import { SContainer } from './styles';
 
 function Header() {
   return (

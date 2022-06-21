@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { INavLinkProps } from 'src/Utils/interfaces';
-import { SNavLinkContainer } from 'src/components/Header/styles';
+import { INavLinkProps } from '../../utils/interfaces';
+import { SNavLinkContainer } from './styles';
 
 export default function NavLink({
   title,

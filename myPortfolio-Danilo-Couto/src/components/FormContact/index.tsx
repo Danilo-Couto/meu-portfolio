@@ -1,6 +1,6 @@
-import SectionTitle from 'src/components/SectionTitle';
-import Form from 'src/components/FormContact/Form';
-import { SContainer } from 'src/components/FormContact/styles';
+import SectionTitle from '../SectionTitle';
+import Form from './Form';
+import { SContainer } from './styles';
 
 export default function FormContato() {
   return (

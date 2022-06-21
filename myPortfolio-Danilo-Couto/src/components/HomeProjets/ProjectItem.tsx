@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { AiOutlineRightCircle } from 'react-icons/ai';
-import { IProjectProps } from 'src/Utils/interfaces';
-import { SProjectContainer } from 'src/components/HomeProjets/styles';
+import { IProjectProps } from '../../utils/interfaces';
+import { SProjectContainer } from './styles';
 
 export default function ProjectItem({
   title,

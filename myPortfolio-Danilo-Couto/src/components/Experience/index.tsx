@@ -1,5 +1,5 @@
-import SectionTitle from 'src/components/SectionTitle';
-import { SContainer } from 'src/components/Experience/styles';
+import { SContainer } from '../BannerProject/styles';
+import SectionTitle from '../SectionTitle';
 
 export default function Experiencias() {
   return (

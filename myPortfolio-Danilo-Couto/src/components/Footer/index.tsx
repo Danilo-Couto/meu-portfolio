@@ -1,5 +1,5 @@
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
-import { SContainer } from 'src/components/Footer/styles';
+import { SContainer } from './styles';
 
 export default function Footer() {
   function handleRedirect(url: string) {

@@ -9,9 +9,10 @@ import {
   SiMysql
 } from 'react-icons/si';
 import { DiNodejs, DiDocker, DiHeroku } from 'react-icons/di';
-import SectionTitle from 'src/components/SectionTitle';
-import StackItem from 'src/components/Stack/StackItem';
-import { ContainerStyle } from 'src/components/Stack/styles';
+
+import SectionTitle from '../SectionTitle';
+import { ContainerStyle } from './styles';
+import StackItem from './StackItem';
 
 function Conhecimentos() {
   return (

@@ -1,5 +1,5 @@
-import { IStackProps } from 'src/Utils/interfaces';
-import { SStackContainer } from 'src/components/Stack/styles';
+import { IStackProps } from '../../utils/interfaces';
+import { SStackContainer } from './styles';
 
 export default function StackItem({ title, icon }: IStackProps) {
   return (

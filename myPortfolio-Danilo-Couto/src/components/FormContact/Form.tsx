@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import theme from '../../styles/theme';
+import { SFormContainer, SInput, STextArea } from './styles';
 // import { sendContactMail } from '../../services/sendMail';
-import theme from 'src/styles/theme';
-import { SFormContainer, SInput, STextArea } from 'src/components/FormContact/styles';
 
 export default function Form() {
   const [name, setName] = useState('');

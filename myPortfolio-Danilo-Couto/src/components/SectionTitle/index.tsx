@@ -1,5 +1,5 @@
-import { ISectionTitleProps } from 'src/Utils/interfaces';
-import { SContainer } from 'src/components/SectionTitle/styles';
+import { ISectionTitleProps } from '../../utils/interfaces';
+import { SContainer } from './styles';
 
 export default function SectionTitle({
   title,
