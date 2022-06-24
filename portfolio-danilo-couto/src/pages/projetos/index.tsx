@@ -1,31 +1,16 @@
 import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
+import userData from '../../assets/data';
+import HeadComponent from '../../components/Head';
 import Header from '../../components/Header';
 import ProjetosPage from '../../components/ProjetosPage';
-import { IProjetoProps } from '../../interface';
 import { client } from '../../services/prismic';
 import { ProjetosContainer } from '../../styles/ProjetosStyles';
 
-export default function Projetos({ projetos, changeMode }: IProjetoProps) {
+export default function Projetos({ projetos, changeMode }) {
   return (
     <ProjetosContainer>
-      <Head>
-        <title>Projetos | Meu portfólio</title>
-        <meta
-          name="description"
-          content="Sou estudante full stack e apresento alguns projetos desenvolvidos por mim!"
-        />
-        <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
-        <meta name="twitter:image" content="/ogimage.png" />
-        <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta
-          property="og:description"
-          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
-        />
-      </Head>
-
+      <HeadComponent />
       <Header changeMode={changeMode} />
       <main className="container">
         {projetos.map(projeto => (
@@ -34,7 +19,7 @@ export default function Projetos({ projetos, changeMode }: IProjetoProps) {
             title={projeto.title}
             type={projeto.type}
             slug={projeto.slug}
-            imgUrl={projeto.thumbnail}
+            thumbnail={projeto.thumbnail}
           />
         ))}
       </main>
@@ -54,7 +39,9 @@ export const getStaticProps: GetStaticProps = async () => {
     type: projeto.data.type,
     description: projeto.data.description,
     link: projeto.data.link.url,
-    // thumbnail: projeto.data.thumbnail.url
+    thumbnail: userData.projects
+      .filter(p => p.title.includes(projeto.data.title))
+      .map(pr => pr.imgUrl)[0]
   }));
 
   return {

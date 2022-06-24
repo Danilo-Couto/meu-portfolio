@@ -14,13 +14,17 @@ gb developer
 tobias
 
 # a fazer
-add dark/lightmode - ok
 setup nodemail
-setup sobre mim
 add ingles, espanhol
 
-otimizar codigos (interfaces, nomes)
+otimizar codigos (interfaces, nomes, conferir links)
+linkar githubs projetos
+para testar metatags
+componetizar getStaticProps
+melhorar descricao dos projetos
+incluir um link para o CV
 
+listar deps usadas:
 "dependencies": {
     "@prismicio/client": "^5.1.0",
     "aos": "^2.3.4",

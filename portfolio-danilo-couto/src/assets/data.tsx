@@ -1,6 +1,8 @@
 const userData = {
   githubUsername: 'Danilo-Couto',
   name: 'Danilo Couto',
+  description:
+    'Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!',
   designation: 'Full-Stack Developer',
   avatarUrl: '/eu.png',
   email: 'danilocoutodev@gmail.com',
@@ -18,12 +20,12 @@ const userData = {
       imgUrl: '/myWallet.png'
     },
     {
-      title: 'Shooping Cart',
+      title: 'Shopping Cart',
       link: 'https://shopping-cart-three-rose.vercel.app/',
       imgUrl: '/shoppingCart.png'
     },
     {
-      title: 'Star Wars Planets Search',
+      title: 'Star Wars Planet Search',
       link: 'https://star-wars-planet-search-phi.vercel.app/',
       imgUrl: '/starWars.png'
     }
@@ -39,6 +41,13 @@ const userData = {
     currentProjectUrl: ''
   },
   experience: [
+    {
+      title: 'Desenvolvedor Full Stack',
+      company: 'Sua empresa aqui',
+      year: '2022',
+      companyLink: '',
+      desc: 'HTML, CSS, JavaScript, React, Jest, Mocha Chai, Node.js, Express, MySQL, StyledComponents, TypeScript, JWT, Sequelize, Docker, Heroku, NextJs'
+    },
     {
       title: 'Software Developer Student',
       company: 'Trybe',
@@ -57,7 +66,7 @@ const userData = {
       company: 'Moto Mochila Brasil',
       year: '2017',
       companyLink: 'https://www.instagram.com/danilo_couto_/',
-      desc: '16 países, 116 mil kms de novas experiencia, aprendizados e conexões.'
+      desc: '16 países, 116 mil kms de aprendendo novos idiomas, culturas, fazendo amigos e exercendo Soft-Skills'
     },
     {
       title: 'Proprietário de Pousada',
@@ -92,6 +101,13 @@ const userData = {
       year: '2009',
       companyLink: 'https://casperlibero.edu.br/',
       desc: 'Especialização em Publicidade e Propaganda'
+    },
+    {
+      title: 'Baterista de Metal',
+      company: 'Melhor não dizer',
+      year: '2006',
+      companyLink: '',
+      desc: 'Gravamos um disco ao vivo e fizemos turnê com bandas nacionais e europeias da cena'
     }
   ],
   resumeUrl: 'https://www.linkedin.com/in/danilocouto/',

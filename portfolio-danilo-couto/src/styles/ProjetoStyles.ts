@@ -21,6 +21,9 @@ export const ProjetoContainer = styled.div`
 
     button {
       margin-top: 2rem;
+      margin-right: 1rem;
+      width: 22rem;
+      height: auto;
     }
 
     @media (max-width: 700px) {

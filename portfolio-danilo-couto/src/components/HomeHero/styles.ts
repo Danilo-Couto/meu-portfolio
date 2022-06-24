@@ -5,6 +5,7 @@ export const Container = styled.section`
   display: flex;
   gap: 2rem;
   align-items: center;
+  align-content: center;
   justify-content: center;
   margin-top: 5rem;
   border-bottom: 3px solid ${({ theme }) => theme.primary};
@@ -45,21 +46,24 @@ export const Container = styled.section`
 export const TextContainer = styled.section`
   margin-bottom: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   h1 {
-    font-size: 8rem;
+    font-size: 4rem;
     color: ${({ theme }) => theme.primary};
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
     color: ${({ theme }) => theme.secondary};
   }
 
   @media (max-width: 1450px) {
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
     }
     h2 {
       font-size: 2rem;
