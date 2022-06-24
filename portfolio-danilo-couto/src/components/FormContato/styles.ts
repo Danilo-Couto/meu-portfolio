@@ -11,15 +11,15 @@ export const FormContainer = styled.form`
   gap: 1rem;
 
   > button {
-    border: none;
+    /* border: none;
     padding: 1rem 2.5rem;
-    color: #fff;
     font-weight: 300;
     font-size: 1.2rem;
     border-radius: 0.5rem;
+    color: ${({ theme }) => theme.background};
     background: ${({ theme }) => theme.primary};
     transition: 0.5s;
-    width: fit-content;
+    width: fit-content; */
 
     &:disabled {
       opacity: 0.5;

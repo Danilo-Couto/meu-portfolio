@@ -6,7 +6,7 @@ import GlobalStyles from '../styles/global';
 import { theme, lightTheme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const changeMode = () => setIsDarkTheme(!isDarkTheme);
 
