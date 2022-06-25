@@ -32,8 +32,8 @@ export default function Home({ projetos, changeMode }: IProjetosProps) {
       <Header changeMode={changeMode} />
       <main className="container">
         <HomeHero />
-        <Conhecimentos />
         <Projetos projetos={projetos} />
+        <Conhecimentos />
         <FormContato />
       </main>
       <Footer />

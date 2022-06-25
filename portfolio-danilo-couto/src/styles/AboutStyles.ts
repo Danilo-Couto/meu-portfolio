@@ -79,7 +79,6 @@ export const AboutContainer = styled.section`
     &:hover {
       filter: brightness(1.3);
       transform: translateY(-1rem);
-      z-index: 100;
     }
 
     /* &:nth-child(even) div {

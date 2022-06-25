@@ -43,6 +43,7 @@ export default createGlobalStyle`
     font-size: 1.2rem;
     border-radius: 0.5rem;
     background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.background};
     transition: 0.5s;
     width: fit-content;
 

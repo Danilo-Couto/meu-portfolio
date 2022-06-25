@@ -8,11 +8,11 @@ function FormContato() {
       <SectionTitle
         title={
           <>
-            Contacte-me!
+            Entre em contato!
             <br />
           </>
         }
-        description={<>Ficarei feliz em responder </>}
+        description="Respondo rápido"
       />
 
       <Form />
