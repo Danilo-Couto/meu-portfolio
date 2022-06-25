@@ -1,16 +1,10 @@
 import Link from 'next/link';
+import { IProjetoItemProps } from '../../interface';
 import { Container } from './styles';
 
-interface ProjetoItemProps {
-  title: string;
-  type: string;
-  imgUrl: string;
-  slug: string;
-}
-
-function ProjetosPage({ title, type, imgUrl, slug }: ProjetoItemProps) {
+function ProjetosPage({ title, type, thumbnail, slug }: IProjetoItemProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    <Container thumbnail={thumbnail}>
       <Link href={`/projetos/${slug}`}>
         <a>
           <div className="overlay" />

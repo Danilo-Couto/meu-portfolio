@@ -1,14 +1,9 @@
+import { IBannerProjectProps } from '../../interface';
 import { Container } from './styles';
 
-interface BannerProjectProps {
-  title: string;
-  type: string;
-  imgUrl: string;
-}
-
-function BannerProject({ title, type, imgUrl }: BannerProjectProps) {
+function BannerProject({ title, type, thumbnail }: IBannerProjectProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    <Container thumbnail={thumbnail}>
       <div className="overlay" />
       <section>
         <h1>{title}</h1>

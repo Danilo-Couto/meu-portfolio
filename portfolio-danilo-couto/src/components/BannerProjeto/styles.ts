@@ -1,12 +1,9 @@
 import styled from 'styled-components';
+import { IBannerProps } from '../../interface';
 
-interface ContainerProps {
-  imgUrl: string;
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<IBannerProps>`
   width: 100%;
-  background: url(${props => props.imgUrl}) no-repeat center;
+  background: url(${props => props.thumbnail}) no-repeat center;
   background-size: cover;
   height: 26rem;
   position: relative;

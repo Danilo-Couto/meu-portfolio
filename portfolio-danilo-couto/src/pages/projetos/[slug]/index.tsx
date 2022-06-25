@@ -1,13 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import BannerProjeto from '../../../components/BannerProjeto';
 import Header from '../../../components/Header';
 import { ProjetoContainer } from '../../../styles/ProjetoStyles';
 import LoadingScreen from '../../../components/LoadingScreen';
 import { client } from '../../../services/prismic';
 import { IProjetoProps } from '../../../interface';
+import HeadComponent from '../../../components/Head';
+import userData from '../../../assets/data';
 
 export default function Projeto({ projeto, changeMode }: IProjetoProps) {
   const router = useRouter();
@@ -15,21 +16,12 @@ export default function Projeto({ projeto, changeMode }: IProjetoProps) {
 
   return (
     <ProjetoContainer>
-      <Head>
-        <title>{projeto.title} | Meu portfólio</title>
-        <meta name="description" content={projeto.description} />
-        <meta property="og:image" content={projeto.thumbnail} />
-        <meta property="og:image:secure_url" content={projeto.thumbnail} />
-        <meta name="twitter:image" content={projeto.thumbnail} />
-        <meta name="twitter:image:src" content={projeto.thumbnail} />
-        <meta property="og:description" content={projeto.description} />
-      </Head>
-
+      <HeadComponent />
       <Header changeMode={changeMode} />
       <BannerProjeto
         title={projeto.title}
         type={projeto.type}
-        imgUrl={projeto.thumbnail}
+        thumbnail={projeto.thumbnail}
       />
       <main>
         <p>{projeto.description}</p>
@@ -37,7 +29,7 @@ export default function Projeto({ projeto, changeMode }: IProjetoProps) {
           <a href={projeto.link}>Ver projeto online</a>
         </button>
         <button type="button">
-          <a href={projeto.link}>Ver códiigo</a>
+          <a href={projeto.link}>Ver código</a>
         </button>
       </main>
     </ProjetoContainer>
@@ -71,8 +63,10 @@ export const getStaticProps: GetStaticProps = async context => {
     title: response.data.title,
     type: response.data.type,
     description: response.data.description,
-    link: response.data.link.url
-    // thumbnail: response.data.thumbnail.url
+    link: response.data.link.url,
+    thumbnail: userData.projects
+      .filter(p => p.title.includes(response.data.title))
+      .map(pr => pr.imgUrl)[0]
   };
 
   return {

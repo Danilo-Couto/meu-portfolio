@@ -1,4 +1,4 @@
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
@@ -37,10 +37,26 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.background};
+    transition: 0.5s;
+    width: fit-content;
+
+    &:hover {
+        background: ${({ theme }) => darken(0.1, theme.primary)};
+      }
   }
 
   a {
+    color: ${({ theme }) => theme.background};
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
   }
 
   .container {

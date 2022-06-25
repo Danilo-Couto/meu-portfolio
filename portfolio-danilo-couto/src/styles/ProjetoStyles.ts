@@ -1,4 +1,3 @@
-import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const ProjetoContainer = styled.div`
@@ -21,23 +20,10 @@ export const ProjetoContainer = styled.div`
     }
 
     button {
-      background: ${({ theme }) => theme.primary};
-      padding: 0.8rem 3rem;
-      border-radius: 0.5rem;
-      border: none;
-      transition: 0.5s;
       margin-top: 2rem;
-
-      &:hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
-      }
-
-      a {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 300;
-      }
+      margin-right: 1rem;
+      width: 22rem;
+      height: auto;
     }
 
     @media (max-width: 700px) {

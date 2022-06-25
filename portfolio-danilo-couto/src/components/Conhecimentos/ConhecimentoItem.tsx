@@ -1,10 +1,5 @@
-import { ReactNode } from 'react';
+import { ConhecimentoProps } from '../../interface';
 import { ConhecimentoContainer } from './styles';
-
-interface ConhecimentoProps {
-  title: string;
-  icon: ReactNode;
-}
 
 export default function ConhecimentoItem({ title, icon }: ConhecimentoProps) {
   return (
