@@ -1,62 +1,73 @@
-// FIX
-// https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
-
-// https://dev.to/chandrapantachhetri/sending-emails-securely-using-node-js-nodemailer-smtp-gmail-and-oauth2-g3a
-
-/* eslint-disable @typescript-eslint/naming-convention */
 import nodemailer from 'nodemailer';
 import { google } from 'googleapis';
+import { Options } from 'nodemailer/lib/mailer';
+
+require('dotenv').config();
 
 const { OAuth2 } = google.auth;
 
-const email = process.env.MAILADRESS;
+const createTransporter = async () => {
+  const oauth2Client = new OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    'https://developers.google.com/oauthplayground'
+  );
 
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-const refreshToken = process.env.REFRESH_TOKEN;
+  oauth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN
+  });
 
-const OAuth2_client = new OAuth2(clientId, clientSecret);
-OAuth2_client.setCredentials({ refresh_token: refreshToken });
+  const accessToken = await new Promise((resolve, reject) => {
+    oauth2Client.getAccessToken((err, token) => {
+      if (err) {
+        reject('Failed to create access token :(');
+      }
+      resolve(token);
+    });
+  });
 
-const accessToken = OAuth2_client.getAccessToken();
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: process.env.GMAIL,
+      accessToken,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN
+    }
+  });
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    type: 'OAuth2',
-    user: email,
-    clientId,
-    clientSecret,
-    refreshToken,
-    accessToken
-  }
-});
+  return transporter;
+};
 
-const mailer = ({ senderMail, name, text }) => {
+const sendEmail = async (emailOptions: Options) => {
+  const emailTransporter = await createTransporter();
+  await emailTransporter.sendMail(emailOptions);
+};
+
+export default async (req, res) => {
+  const { senderMail, name, text } = req.body;
+
   const from = `${name} <${senderMail}>`;
   const message = {
     from,
-    to: `${email}`,
+    to: process.env.GMAIL,
     subject: `Nova mensagem de contato - ${name}`,
     text,
     replyTo: from
   };
 
-  return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) =>
-      error ? reject(error) : resolve(info)
-    );
-  });
-};
-
-export default async (req, res) => {
-  const { senderMail, name, content } = req.body;
-
-  if (senderMail === '' || name === '' || content === '') {
+  if (senderMail === '' || name === '' || text === '') {
     res.status(403).send();
     return;
   }
 
-  const mailerRes = await mailer({ senderMail, name, text: content });
+  const mailerRes = await sendEmail({
+    subject: message.subject,
+    text,
+    to: message.to,
+    from: message.from
+  });
   res.send(mailerRes);
 };
