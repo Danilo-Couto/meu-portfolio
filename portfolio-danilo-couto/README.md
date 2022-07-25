@@ -16,7 +16,6 @@ express: para escutar APIS
 nodemailer: envio de emails via node
 googleapis: para integrar form de contato com servico SMTP
 
-
 # githubs de referência a desenvolver este projeto
 gb developer
 tobias

@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import userData from '../../assets/data';
+import Footer from '../../components/Footer';
 import HeadComponent from '../../components/Head';
 import Header from '../../components/Header';
 import ProjetosPage from '../../components/ProjetosPage';
@@ -23,6 +24,7 @@ export default function Projetos({ projetos, changeMode }) {
           />
         ))}
       </main>
+      <Footer />
     </ProjetosContainer>
   );
 }

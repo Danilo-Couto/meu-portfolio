@@ -86,14 +86,21 @@ const userData = {
       company: 'Agencia Ginga',
       year: '2011',
       companyLink: 'https://www.ginga.ag/',
+      desc: 'Responsável pelos resultados da área de mídia.'
+    },
+    {
+      title: 'Business Manager',
+      company: 'Actual Sales Portugal',
+      year: '2010',
+      companyLink: 'http://br.actualsales.com/',
       desc: 'Responsável pelo planejamento e execução do MKT Digital.'
     },
     {
-      title: 'Some jobs in Advertisement Industry',
+      title: 'De estagiário a analista de mídia',
       company: 'Sinc, TV 1, UseLink',
       year: '2008',
-      companyLink: '',
-      desc: 'De estagiário a analista de mídia.'
+      companyLink: 'https://www.grupotv1.com.br/',
+      desc: 'Responsável pelo gerenciamento e tráfego de campanhas digitais'
     },
     {
       title: 'Graduado em Comunicação Social ',
