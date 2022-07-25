@@ -1,0 +1,85 @@
+import { Options } from 'nodemailer/lib/mailer';
+
+import nodemailer from 'nodemailer';
+import { google } from 'googleapis';
+
+require('dotenv').config();
+
+const oAuth2Client = new google.auth.OAuth2(
+  process.env.CLIENT_ID,
+  process.env.CLIENT_SECRET,
+  'https://developers.google.com/oauthplayground'
+);
+
+oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
+
+async function createTransporter() {
+  try {
+    const accessToken = await oAuth2Client.getAccessToken();
+
+    const transport = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        type: 'OAuth2',
+        user: 'danilocoutodev@gmail.com',
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken
+      }
+    });
+
+    // const mailOptions = {
+    //   subject: 'Hello from gmail using API',
+    //   text: 'Hello from gmail email using API',
+    //   to: 'to email address here',
+    //   from: 'SENDER NAME <yours authorised email address@gmail.com>'
+    // };
+    // const result = await transport.sendMail(mailOptions);
+
+    return transport;
+  } catch (error) {
+    return error;
+  }
+}
+
+const sendMail = async (emailOptions: Options) => {
+  const emailTransporter = await createTransporter();
+  await emailTransporter.sendMail(emailOptions);
+};
+
+// sendMail()
+//   .then(result => console.log('Email sent...', result))
+//   .catch(error => console.log(error.message));
+
+export default async (req, res) => {
+  const { senderMail, name, text } = req.body;
+
+  const from = `${name} <${senderMail}>`;
+
+  const message = {
+    from,
+    to: process.env.GMAIL,
+    subject: `Nova mensagem de contato - ${name}`,
+    text,
+    replyTo: from
+  };
+
+  if (senderMail === '' || name === '' || text === '') {
+    res.status(403).send();
+    return;
+  }
+
+  try {
+    const mailerRes = await sendMail({
+      subject: message.subject,
+      text,
+      to: message.to,
+      from: message.from
+    });
+    res.send(mailerRes);
+  } catch (error) {
+    console.log({ error });
+    res.send(error);
+  }
+};
