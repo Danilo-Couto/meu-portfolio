@@ -65,7 +65,6 @@ const Form = () => {
       onSubmit={handleSubmit}
     >
       <Input
-        className="input"
         type="text"
         placeholder="Name"
         name="name"
@@ -74,7 +73,6 @@ const Form = () => {
         required
       />
       <Input
-        className="input"
         type="email"
         placeholder="Email"
         name="email"
@@ -89,7 +87,6 @@ const Form = () => {
         onChange={handleChange}
       />
       <TextArea
-        className="textarea"
         placeholder="Your Message"
         name="message"
         value={contact.message}
