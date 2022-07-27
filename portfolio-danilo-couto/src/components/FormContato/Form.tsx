@@ -4,75 +4,103 @@ import { sendContactMail } from '../../services/sendContactMail';
 import { theme } from '../../styles/theme';
 import { FormContainer, Input, TextArea } from './styles';
 
-interface IhandleSubmit {
-  preventDefault: () => void;
+interface IEvent {
+  target: { name: any; value: any };
 }
 
-export default function Form() {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensagem, setMensagem] = useState('');
+const Form = () => {
   const [loading, setLoading] = useState(false);
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    subject: 'Contato do meu Portfólio',
+    honeypot: '', // if any value received in this field, form submission will be ignored.
+    message: '',
+    replyTo: '@', // this will set replyTo of email to email address entered in the form
+    accessKey: process.env.EMAIL_API_KEY
+  });
 
-  async function handleSubmit(event: IhandleSubmit) {
-    event.preventDefault();
+  const handleChange = (e: IEvent) =>
+    setContact({ ...contact, [e.target.name]: e.target.value });
 
-    if (!nome || !email || !mensagem) {
-      toast('Preencha todos os campos para enviar sua mensagem!', {
-        style: {
-          background: theme.error,
-          color: '#fff'
-        }
-      });
-      return;
-    }
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    setLoading(true);
 
     try {
-      setLoading(true);
-      await sendContactMail(nome, email, mensagem);
-      setNome('');
-      setEmail('');
-      setMensagem('');
+      await sendContactMail(contact);
 
-      toast('Mensagem enviada com sucesso!', {
+      toast('Obrigado pela mensagem! Em breve, responderei.', {
         style: {
-          background: theme.secondary,
-          color: '#fff'
+          background: theme.text,
+          color: theme.border
         }
       });
     } catch (error) {
-      toast('Ocorreu um erro ao tentar enviar sua mensagem. Tente novamente!', {
-        style: {
-          background: theme.error,
-          color: '#fff'
+      toast(
+        'Ocorreu um erro. Tente diretamente pelo danilocoutodev@gmail.com',
+        {
+          style: {
+            background: theme.error,
+            color: '#fff'
+          }
         }
-      });
+      );
     } finally {
       setLoading(false);
+      setContact({
+        ...contact,
+        name: '',
+        email: '',
+        message: ''
+      });
     }
-  }
+  };
 
   return (
-    <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
+    <FormContainer
+      data-aos="fade-up"
+      action="https://api.staticforms.xyz/submit"
+      method="post"
+      onSubmit={handleSubmit}
+    >
       <Input
-        placeholder="Nome"
-        value={nome}
-        onChange={({ target }) => setNome(target.value)}
+        className="input"
+        type="text"
+        placeholder="Name"
+        name="name"
+        value={contact.name}
+        onChange={handleChange}
+        required
       />
       <Input
-        placeholder="E-mail"
+        className="input"
         type="email"
-        value={email}
-        onChange={({ target }) => setEmail(target.value)}
+        placeholder="Email"
+        name="email"
+        value={contact.email}
+        onChange={handleChange}
+        required
+      />
+      <Input
+        type="text"
+        name="honeypot"
+        style={{ display: 'none' }}
+        onChange={handleChange}
       />
       <TextArea
-        placeholder="Mensagem"
-        value={mensagem}
-        onChange={({ target }) => setMensagem(target.value)}
+        className="textarea"
+        placeholder="Your Message"
+        name="message"
+        value={contact.message}
+        onChange={handleChange}
+        required
       />
       <button type="submit" disabled={loading}>
         ENVIAR
       </button>
     </FormContainer>
   );
-}
+};
+
+export default Form;
