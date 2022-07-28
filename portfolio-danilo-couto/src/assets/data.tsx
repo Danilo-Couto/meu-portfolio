@@ -2,7 +2,7 @@ const userData = {
   githubUsername: 'Danilo-Couto',
   name: 'Danilo Couto',
   description:
-    'Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!',
+    'Sou um estudante desenvolvedor Full-Stack e aqui apresento alguns projetos desenvolvidos por mim!',
   designation: 'Full-Stack Developer',
   avatarUrl: '/eu.png',
   email: 'danilocoutodev@gmail.com',
@@ -10,24 +10,34 @@ const userData = {
   address: 'Pipa, RN, Brazil.',
   projects: [
     {
+      title: 'Todo List',
+      link: 'https://todolist-frontend-puce.vercel.app/',
+      imgUrl: '/tasklist.png',
+      gitLink: 'https://github.com/Danilo-Couto/todolist-backend'
+    },
+    {
       title: 'Recipe App',
       link: 'https://recipe-app-nu-puce.vercel.app/',
-      imgUrl: '/recipeApp.png'
+      imgUrl: '/recipeApp2.png',
+      gitLink: 'https://github.com/Danilo-Couto/recipeApp'
     },
     {
       title: 'My Wallet',
       link: 'https://my-wallet-liard.vercel.app/',
-      imgUrl: '/myWallet.png'
+      imgUrl: '/wallet.png',
+      gitLink: 'https://github.com/Danilo-Couto/MyWallet'
     },
     {
       title: 'Shopping Cart',
       link: 'https://shopping-cart-three-rose.vercel.app/',
-      imgUrl: '/shoppingCart.png'
+      imgUrl: '/shoppingcart.png',
+      gitLink: 'https://github.com/Danilo-Couto/Shopping-Cart'
     },
     {
       title: 'Star Wars Planet Search',
       link: 'https://star-wars-planet-search-phi.vercel.app/',
-      imgUrl: '/starWars.png'
+      imgUrl: '/starWars2.png',
+      gitLink: 'https://github.com/Danilo-Couto/StarWars-PlanetSearch'
     }
   ],
   about: {
@@ -46,27 +56,27 @@ const userData = {
       company: 'Sua empresa aqui',
       year: '2022',
       companyLink: '',
-      desc: 'HTML, CSS, JavaScript, React, Jest, Mocha Chai, Node.js, Express, MySQL, StyledComponents, TypeScript, JWT, Sequelize, Docker, Heroku, NextJs'
+      desc: 'Busco minha primeira oportunidade na área, mas tenho 10 anos de histórico profissional em publicidade e 5 anos de empreendedorismo. Sou totalmente aberto ao novo, empreendedor, eterno aprendiz e focado em alcançar meus objetivos.'
     },
     {
       title: 'Software Developer Student',
       company: 'Trybe',
       year: '2021',
-      companyLink: 'https://www.betrybe.com/',
-      desc: ''
+      companyLink: 'https://github.com/Danilo-Couto/Trybe-Exercices',
+      desc: 'Clique para ver meu repositório de exercícios enquanto estudante'
     },
     {
       title: 'Transição de carreira',
       year: '2021',
       companyLink: '',
-      desc: 'Após trabalhar em agências de Publicidade, empreender com turismo e tecnologia, vi em TI uma nova oportunidade de vida.'
+      desc: 'Após viajar o mundo, vi em TI uma nova oportunidade para mudar vidas e comunidades através de soluções que tragam estabilidade econômica e social e maior liberdade individual.'
     },
     {
       title: 'Viagem de Moto pelo Mundo',
       company: 'Moto Mochila Brasil',
       year: '2017',
       companyLink: 'https://www.instagram.com/danilo_couto_/',
-      desc: '16 países, 116 mil kms de aprendendo novos idiomas, culturas, fazendo amigos e exercendo Soft-Skills'
+      desc: '16 países, 116 mil kms praticando Soft-Skills: novos paradigmas, idiomas, culturas e muitos amigos'
     },
     {
       title: 'Proprietário de Pousada',
@@ -79,28 +89,28 @@ const userData = {
       company: 'Night Map',
       year: '2013',
       companyLink: '',
-      desc: 'Um app de mapeamento de entretenimento noturno.'
+      desc: 'Um app de mapeamento de entretenimento noturno. Fui co-responsável pela ideia e plano de negócios'
     },
     {
       title: 'Coordenador de Mídia',
       company: 'Agencia Ginga',
       year: '2011',
       companyLink: 'https://www.ginga.ag/',
-      desc: 'Responsável pelos resultados da área de mídia.'
+      desc: 'Líder da área de mídia digital da agência, bem como na elaboração de planos de campanhas e resultados da área.'
     },
     {
       title: 'Business Manager',
       company: 'Actual Sales Portugal',
       year: '2010',
       companyLink: 'http://br.actualsales.com/',
-      desc: 'Responsável pelo planejamento e execução do MKT Digital.'
+      desc: 'Responsável pela prospecção de clientes, pelo planejamento e execução do MKT Digital de diversos clientes nacionais e internacionais.'
     },
     {
       title: 'De estagiário a analista de mídia',
       company: 'Sinc, TV 1, UseLink',
       year: '2008',
       companyLink: 'https://www.grupotv1.com.br/',
-      desc: 'Responsável pelo gerenciamento e tráfego de campanhas digitais'
+      desc: 'Responsável pelo gerenciamento e tráfego das campanhas digitais do Grupo Pão de Açucar'
     },
     {
       title: 'Graduado em Comunicação Social ',
@@ -110,7 +120,7 @@ const userData = {
       desc: 'Especialização em Publicidade e Propaganda'
     },
     {
-      title: 'Baterista de Metal',
+      title: 'Baterista de Hardcore/ Metal',
       company: 'Melhor não dizer',
       year: '2006',
       companyLink: '',

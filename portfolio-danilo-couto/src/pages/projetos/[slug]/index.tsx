@@ -26,10 +26,14 @@ export default function Projeto({ projeto, changeMode }: IProjetoProps) {
       <main>
         <p>{projeto.description}</p>
         <button type="button">
-          <a href={projeto.link}>Ver projeto online</a>
+          <a target="_blank" href={projeto.link} rel="noreferrer">
+            Ver projeto online
+          </a>
         </button>
         <button type="button">
-          <a href={projeto.link}>Ver código</a>
+          <a target="_blank" href={projeto.gitLink} rel="noreferrer">
+            Ver código
+          </a>
         </button>
       </main>
     </ProjetoContainer>
@@ -64,6 +68,9 @@ export const getStaticProps: GetStaticProps = async context => {
     type: response.data.type,
     description: response.data.description,
     link: response.data.link.url,
+    gitLink: userData.projects
+      .filter(p => p.title.includes(response.data.title))
+      .map(pr => pr.gitLink)[0],
     thumbnail: userData.projects
       .filter(p => p.title.includes(response.data.title))
       .map(pr => pr.imgUrl)[0]
