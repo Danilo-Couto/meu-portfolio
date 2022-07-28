@@ -5,7 +5,7 @@ export const theme = {
   secondary: '#c8e3ee', // texto sec
   gradient: 'linear-gradient(225deg, #1B2138 0%, #11172B 100%);',
   text: '#c8e3ee', // icones do footer
-  textHighlight: '#444B5B', // texto header destaivado
+  textHighlight: '#444B5B', // texto header desativado
   textLight: '#C4C4C4', // ? descricao cards experiencias
   border: '#313958', // borda input e container projetos
   inputBackground: '#1B2138', // fundo formcontact

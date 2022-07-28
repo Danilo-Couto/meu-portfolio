@@ -1,21 +1,12 @@
-/* eslint-disable no-console */
-import axios from 'axios';
-
-export const sendContactMail = async (
-  name: string,
-  senderMail: string,
-  text: string
-) => {
-  const data = {
-    name,
-    senderMail,
-    text
-  };
-
+export const sendContactMail = async (contact: Object) => {
   try {
-    return await axios.post('/api/contact', data);
+    return await fetch('https://api.staticforms.xyz/submit', {
+      method: 'POST',
+      body: JSON.stringify(contact),
+      headers: { 'Content-Type': 'application/json' }
+    });
   } catch (error) {
-    console.log({ error });
+    // console.log({ error });
     return error;
   }
 };

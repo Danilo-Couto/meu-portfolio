@@ -12,7 +12,7 @@ function FormContato() {
             <br />
           </>
         }
-        description="Respondo rápido"
+        description="Ganharei meu dia"
       />
 
       <Form />

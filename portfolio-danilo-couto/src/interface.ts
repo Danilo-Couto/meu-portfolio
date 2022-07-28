@@ -7,6 +7,7 @@ interface IProjetos {
   slug?: string;
   description?: string;
   link?: string;
+  gitLink?: string;
 }
 
 export interface IProjetosProps {

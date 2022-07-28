@@ -1,5 +1,6 @@
 import userData from '../../assets/data';
 import ExperienciaCard from '../../components/ExperienciaCard';
+import Footer from '../../components/Footer';
 import HeadComponent from '../../components/Head';
 import Header from '../../components/Header';
 import { AboutContainer } from '../../styles/AboutStyles';
@@ -18,6 +19,7 @@ export default function About({ changeMode }) {
           ))}
         </div>
       )}
+      <Footer />
     </AboutContainer>
   );
 }
