@@ -32,7 +32,7 @@ export default function Projeto({ projeto, changeMode }: IProjetoProps) {
         </button>
         <button type="button">
           <a target="_blank" href={projeto.gitLink} rel="noreferrer">
-            Ver código
+            Ver código GitHub
           </a>
         </button>
       </main>

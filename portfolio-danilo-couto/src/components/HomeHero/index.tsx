@@ -12,9 +12,25 @@ function HomeHero() {
           <h2>
             Bem vindo ao meu sempre em construção <b> porfólio </b>
           </h2>
-          <button type="button">
-            <a href="/sobre">Conheça-me</a>
-          </button>
+          <div>
+            <button type="button">
+              <a href="/sobre">+ sobre mim</a>
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                window.open('https://www.linkedin.com/in/danilocouto/')
+              }
+            >
+              LINKEDIN
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open('https://github.com/Danilo-Couto/')}
+            >
+              GITHUB
+            </button>
+          </div>
         </TextContainer>
       </div>
     </Container>

@@ -1,9 +1,4 @@
-import userData from '../../assets/data';
-import ExperienciaItem from './ExperienciaItem';
 import { Container, TextContainer } from './styles';
-
-const myCV = userData.resumeUrl;
-const mYDescription = userData.about.description;
 
 function Experiencias() {
   return (

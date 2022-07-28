@@ -56,7 +56,7 @@ const userData = {
       company: 'Sua empresa aqui',
       year: '2022',
       companyLink: '',
-      desc: 'Busco minha primeira oportunidade na área, mas tenho 10 anos de histórico profissional em publicidade e 5 anos de empreendedorismo. Sou totalmente aberto ao novo, empreendedor, eterno aprendiz e focado em alcançar meus objetivos.'
+      desc: 'Busco minha primeira oportunidade na área, mas tenho 10 anos de histórico profissional em publicidade e outros 6 anos de empreendedorismo. Sou totalmente aberto ao novo, empreendedor, eterno aprendiz e focado em alcançar meus objetivos.'
     },
     {
       title: 'Software Developer Student',
