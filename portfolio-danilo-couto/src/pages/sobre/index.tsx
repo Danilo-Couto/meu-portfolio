@@ -15,7 +15,7 @@ export default function About({ changeMode }) {
       {userData.experience.length > 0 && (
         <div className="timeline-container">
           {userData.experience.map((data, i) => (
-            <ExperienciaCard data={data} key={i} />
+            <ExperienciaCard data={data} key={i[0]} />
           ))}
         </div>
       )}

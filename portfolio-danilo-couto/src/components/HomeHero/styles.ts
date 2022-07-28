@@ -19,6 +19,10 @@ export const Container = styled.section`
     flex: 4;
   }
 
+  button {
+    margin: 0.3rem;
+  }
+
   @media (max-width: 1450px) {
     > img {
       width: 30rem;
