@@ -17,7 +17,9 @@ const Form = () => {
     honeypot: '', // if any value received in this field, form submission will be ignored.
     message: '',
     replyTo: '@', // this will set replyTo of email to email address entered in the form
-    accessKey: process.env.NEXT_PUBLIC_EMAIL_API_KEY
+    accessKey:
+      process.env.NEXT_PUBLIC_EMAIL_API_KEY ||
+      '8b54184c-791f-45aa-8958-139d0afe2324'
   });
 
   const handleChange = (e: IEvent) =>
