@@ -14,7 +14,7 @@ const ExperienciaCard = ({ data }) => (
       )}
       {data.title.includes('Desenvolvedor') && (
         <button type="button">
-          <a download href="/resume.pdf">
+          <a download href="/Resume-Danilo-Couto.pdf">
             Baixar CV
           </a>
         </button>
