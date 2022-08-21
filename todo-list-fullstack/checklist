@@ -1,0 +1,21 @@
+Requisitos técnicos:
+Front-End em React - ok 
+Back-End em NodeJS com MySQL - ok
+
+Funcionalidades:
+Visualizar a lista de tarefas - ok
+Esta lista deve ser ordenável por ordem alfabética, data de criação ou por status;
+Inserir uma nova tarefa na lista - ok
+Remover uma tarefa da lista - ok
+Atualizar uma tarefa da lista - ok
+A tarefa deve possuir um status editável:pendente, em andamento ou pronto - ok 
+30% testes de cobertura - 
+
+Proximos passos:
+criar regras de negócios
+fazer middlewares de validação e erro
+organizar melhor a arquitetura em camadas - quase
+tipar
+usar interfaces
+testes
+
