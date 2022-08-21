@@ -13,36 +13,69 @@ const userData = {
       title: 'Todo List',
       link: 'https://todolist-frontend-puce.vercel.app/',
       imgUrl: '/tasklist.png',
-      gitLink: 'https://github.com/Danilo-Couto/todolist-backend'
+      gitLink: 'https://github.com/Danilo-Couto/todolist-backend',
+      stack: 'Full Stack'
     },
     {
       title: 'Recipe App',
       link: 'https://recipe-app-nu-puce.vercel.app/',
       imgUrl: '/recipeApp2.png',
-      gitLink: 'https://github.com/Danilo-Couto/recipeApp'
+      gitLink: 'https://github.com/Danilo-Couto/recipeApp',
+      stack: 'Front-End'
     },
     {
       title: 'My Wallet',
       link: 'https://my-wallet-liard.vercel.app/',
       imgUrl: '/wallet.png',
-      gitLink: 'https://github.com/Danilo-Couto/MyWallet'
+      gitLink: 'https://github.com/Danilo-Couto/MyWallet',
+      stack: 'Front-End'
     },
     {
       title: 'Shopping Cart',
       link: 'https://shopping-cart-three-rose.vercel.app/',
       imgUrl: '/shoppingcart.png',
-      gitLink: 'https://github.com/Danilo-Couto/Shopping-Cart'
+      gitLink: 'https://github.com/Danilo-Couto/Shopping-Cart',
+      stack: 'Front-End'
     },
     {
       title: 'Star Wars Planet Search',
       link: 'https://star-wars-planet-search-phi.vercel.app/',
       imgUrl: '/starWars2.png',
-      gitLink: 'https://github.com/Danilo-Couto/StarWars-PlanetSearch'
+      gitLink: 'https://github.com/Danilo-Couto/StarWars-PlanetSearch',
+      stack: 'Front-End'
+    },
+    {
+      title: 'Futebol Clube',
+      link: '',
+      imgUrl: '',
+      gitLink: 'https://github.com/Danilo-Couto/Futebol-Clube',
+      stack: 'Back-End'
+    },
+    {
+      title: 'Car Shop',
+      link: '',
+      imgUrl: '',
+      gitLink: 'https://github.com/Danilo-Couto/Car-Shop',
+      stack: 'Back-End'
+    },
+    {
+      title: 'Blogs API',
+      link: '',
+      imgUrl: '',
+      gitLink: 'https://github.com/Danilo-Couto/Blogs-API',
+      stack: 'Back-End'
+    },
+    {
+      title: 'Store Manager',
+      link: '',
+      imgUrl: '',
+      gitLink: 'https://github.com/Danilo-Couto/Store-Manager',
+      stack: 'Back-End'
     }
   ],
   about: {
     title:
-      'Sou um estudante engenharia de software em busca de impacto social, cultural e um mundo melhor.',
+      'Sou um estudante de desenvolvimento de software em busca de impacto social, cultural e de um mundo melhor.',
     description: [
       `Estudo na Trybe desde 2021 e desde então venho codando em HTML, CSS, JavaScript, React, Jest, Mocha Chai, Node.js, Express, MySQL, StyledComponents, TypeScript, JWT, Sequelize, Docker, Heroku, NextJs e buscando mais. `,
       `Clique para me conhecer melhor!`
