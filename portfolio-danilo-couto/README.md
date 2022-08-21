@@ -1,4 +1,4 @@
-# listadas bibliotecas e frameworks
+# Lista das bibliotecas e frameworks utilizadas
 nodeJs
 nextJs
 prismic: cms para controlar criacao de conteudo
