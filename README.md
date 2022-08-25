@@ -1,7 +1,12 @@
 Neste repositorio encontram-se meus principais projetos até agora.
 
-MyWallet
-Shopping-Cart
-StarWars
-RecipeApp
-TicTacToe
+Front-End:
+  MyWallet
+  Shopping-Cart
+  StarWars
+  RecipeApp
+  TicTacToe
+
+Back-End:
+
+Full-Stack:
