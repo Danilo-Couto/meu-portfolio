@@ -1,12 +1,15 @@
-Neste repositorio encontram-se meus principais projetos até agora.
+Neste repositório estão organizados meus últimos projetos.
+
+Full-Stack:
+  Porfolio
+  Todo-list
 
 Front-End:
-  MyWallet
+  My-Wallet
   Shopping-Cart
-  StarWars
-  RecipeApp
+  Star-Wars
+  Recipe-App
   TicTacToe
 
 Back-End:
-
-Full-Stack:
+  ...em breve
