@@ -1,14 +1,14 @@
 Neste repositório estão organizados meus últimos projetos.
 
 Full-Stack:
-  Porfolio
+  Porfolio,
   Todo-list
 
 Front-End:
-  My-Wallet
-  Shopping-Cart
-  Star-Wars
-  Recipe-App
+  My-Wallet,
+  Shopping-Cart,
+  Star-Wars,
+  Recipe-App,
   TicTacToe
 
 Back-End:
