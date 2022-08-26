@@ -1,11 +1,11 @@
-## Habilidades
+## API Shopping Cart
+
+Uma aplicação HTML/ JavaScript que simula um carrinho de compras do Mercado Livre. Feito para testar as seguintes habilidades:
 - Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
 - Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
 - Trabalhar com funções assíncronas;
 - Implementar testes unitários.
 
-
-## API Shopping Cart
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
