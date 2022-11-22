@@ -1,6 +1,7 @@
 Meu primeiro portfolio
+https://portfolio-danilo-couto.vercel.app/
 
-# Lista das bibliotecas e frameworks utilizadas
+## Lista das bibliotecas e frameworks utilizadas
 nextJs
 nodeJs
 prismic: cms para controlar criacao de conteudo
