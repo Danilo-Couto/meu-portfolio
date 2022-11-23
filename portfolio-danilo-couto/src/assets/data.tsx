@@ -10,6 +10,20 @@ const userData = {
   address: 'Pipa, RN, Brazil.',
   projects: [
     {
+      title: 'Site Pousada Toa Toa Em Pipa',
+      link: '',
+      imgUrl: '/toatoa.png',
+      gitLink: 'https://github.com/Danilo-Couto/nextjs-webpage-pousada-toatoa',
+      stack: 'NextJS'
+    },
+    {
+      title: 'Booking.com Web Scrapping',
+      link: '',
+      imgUrl: '',
+      gitLink: 'https://github.com/Danilo-Couto/scrapping_booking',
+      stack: 'Python'
+    },
+    {
       title: 'Todo List',
       link: 'https://todolist-frontend-puce.vercel.app/',
       imgUrl: '/tasklist.png',

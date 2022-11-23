@@ -25,7 +25,6 @@ export default function Home({ projetos, changeMode }: IProjetosProps) {
 
   const router = useRouter();
   if (router.isFallback) return <LoadingScreen />;
-
   return (
     <HomeContainer>
       <HeadComponent />
@@ -53,9 +52,10 @@ export const getStaticProps: GetStaticProps = async () => {
     type: projeto.data.type,
     description: projeto.data.description,
     link: projeto.data.link.url,
-    thumbnail: userData.projects
-      .filter(p => p.title.includes(projeto.data.title))
-      .map(pr => pr.imgUrl)[0]
+    thumbnail:
+      userData.projects
+        .filter(p => p.title.includes(projeto.data.title))
+        .map(p => p.imgUrl)[0] || null
   }));
 
   return {
