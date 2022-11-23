@@ -68,12 +68,14 @@ export const getStaticProps: GetStaticProps = async context => {
     type: response.data.type,
     description: response.data.description,
     link: response.data.link.url,
-    gitLink: userData.projects
-      .filter(p => p.title.includes(response.data.title))
-      .map(pr => pr.gitLink)[0],
-    thumbnail: userData.projects
-      .filter(p => p.title.includes(response.data.title))
-      .map(pr => pr.imgUrl)[0]
+    gitLink:
+      userData.projects
+        .filter(p => p.title.includes(response.data.title))
+        .map(p => p.gitLink)[0] || null,
+    thumbnail:
+      userData.projects
+        .filter(p => p.title.includes(response.data.title))
+        .map(p => p.imgUrl)[0] || null
   };
 
   return {
