@@ -1,16 +1,17 @@
 import Link from 'next/link';
+import { AiOutlineRightCircle } from 'react-icons/ai';
 import { IProjetoItemProps } from '../../interface';
 import { ProjetoContainer } from './styles';
 
 export default function ProjetoItem({
   title,
   type,
-  slug,
+  id,
   thumbnail
 }: IProjetoItemProps) {
   return (
     <ProjetoContainer imgUrl={thumbnail} data-aos="fade-up">
-      <Link href={`/projetos/${slug}`}>
+      <Link href={`/projetos/${id}`}>
         <section>
           <div className="overlay" />
           <div className="text">
@@ -19,13 +20,13 @@ export default function ProjetoItem({
           </div>
         </section>
       </Link>
-      {/* <button type="button">
-        <Link href={`/projetos/${slug}`}>
+      <button type="button">
+        <Link href={`/projetos/${id}`}>
           <a>
             Ver mais <AiOutlineRightCircle />
           </a>
         </Link>
-      </button> */}
+      </button>
     </ProjetoContainer>
   );
 }

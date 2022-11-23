@@ -47,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const paths = projetos.results.map(projeto => ({
     params: {
-      slug: projeto.uid
+      id: projeto.uid
     }
   }));
 
@@ -58,12 +58,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const { slug } = context.params;
+  const { id } = context.params;
 
-  const response = await client.getByUID('portfolio', String(slug), {});
+  const response = await client.getByUID('portfolio', String(id), {});
 
   const projeto = {
-    slug: response.uid,
+    id: response.uid,
     title: response.data.title,
     type: response.data.type,
     description: response.data.description,

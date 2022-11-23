@@ -92,6 +92,12 @@ const userData = {
       desc: 'Busco minha primeira oportunidade na área, mas tenho 10 anos de histórico profissional em publicidade e outros 6 anos de empreendedorismo. Sou totalmente aberto ao novo, empreendedor, eterno aprendiz e focado em alcançar meus objetivos.'
     },
     {
+      title: 'Pousada Toa Toa em Pipa',
+      year: '2022',
+      companyLink: 'https://www.pousadaempipa.com.br/',
+      desc: 'Proprietário da pousada na Praia da Pipa, RN, Brasil.'
+    },
+    {
       title: 'Software Developer Student',
       company: 'Trybe',
       year: '2021',
@@ -108,7 +114,7 @@ const userData = {
       title: 'Viagem de Moto pelo Mundo',
       company: 'Moto Mochila Brasil',
       year: '2017',
-      companyLink: 'https://www.instagram.com/danilo_couto_/',
+      companyLink: 'https://www.youtube.com/c/MotoeMochilaBrasil',
       desc: '16 países, 116 mil kms praticando Soft-Skills: novos paradigmas, idiomas, culturas e muitos amigos'
     },
     {

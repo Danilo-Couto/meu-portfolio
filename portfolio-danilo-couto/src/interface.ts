@@ -4,7 +4,7 @@ interface IProjetos {
   title: string;
   type: string;
   thumbnail: string;
-  slug?: string;
+  id?: string;
   description?: string;
   link?: string;
   gitLink?: string;
@@ -24,7 +24,7 @@ export interface IProjetoItemProps {
   title: string;
   type: string;
   thumbnail: string;
-  slug: string;
+  id: string;
 }
 
 export interface IBannerProps {

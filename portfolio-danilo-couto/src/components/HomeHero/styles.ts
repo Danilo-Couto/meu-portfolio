@@ -10,13 +10,19 @@ export const Container = styled.section`
   margin-top: 5rem;
   border-bottom: 3px solid ${({ theme }) => theme.primary};
 
-  > img {
-    width: 40rem;
-    flex: 1;
+  > div {
+    /* flex: 4; */
   }
 
-  > div {
-    flex: 4;
+  > div > img {
+    /* margin-top: -5rem; */
+    object-fit: cover;
+    height: 28rem;
+    width: 70rem;
+  }
+
+  > div > p {
+    color: white;
   }
 
   button {

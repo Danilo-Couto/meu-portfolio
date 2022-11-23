@@ -19,7 +19,20 @@ const ExperienciaCard = ({ data }) => (
           </a>
         </button>
       )}
-
+      {data.title.includes('Viagem') && (
+        <button type="button">
+          <a target="_blank" href={data.companyLink} rel="noreferrer">
+            Youtube
+          </a>
+        </button>
+      )}
+      {data.title.includes('Pousada') && (
+        <button type="button">
+          <a target="_blank" href={data.companyLink} rel="noreferrer">
+            Site
+          </a>
+        </button>
+      )}
       <span className="circle" />
     </div>
   </div>

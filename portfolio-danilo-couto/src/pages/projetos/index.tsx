@@ -16,10 +16,10 @@ export default function Projetos({ projetos, changeMode }) {
       <main className="container">
         {projetos.map(projeto => (
           <ProjetosPage
-            key={projeto.slug}
+            key={projeto.id}
             title={projeto.title}
             type={projeto.type}
-            slug={projeto.slug}
+            id={projeto.id}
             thumbnail={projeto.thumbnail}
           />
         ))}
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
   );
 
   const projetos = projectResponse.results.map(projeto => ({
-    slug: projeto.uid,
+    id: projeto.uid,
     title: projeto.data.title,
     type: projeto.data.type,
     description: projeto.data.description,

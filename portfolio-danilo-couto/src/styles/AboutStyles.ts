@@ -26,7 +26,7 @@ export const AboutContainer = styled.section`
     justify-content: flex-end;
     padding-right: 2rem;
     position: relative;
-    margin: 0.625rem 0;
+    margin: 1rem 0;
     width: 50%;
 
     time {
@@ -52,6 +52,7 @@ export const AboutContainer = styled.section`
       color: ${({ theme }) => theme.textLight};
       font-size: 1.2rem;
       font-weight: 300;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -60,7 +61,6 @@ export const AboutContainer = styled.section`
     align-self: flex-end;
     justify-content: flex-start;
     padding-left: 2rem;
-    padding-right: 0;
   }
 
   .timeline-item-content {
@@ -71,19 +71,17 @@ export const AboutContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-end;
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
     position: relative;
-    width: 40rem;
+    width: 35rem;
     text-align: right;
 
     &:hover {
       filter: brightness(1.3);
       transform: translateY(-1rem);
+      z-index: 100;
     }
-
-    /* &:nth-child(even) div {
-      margin-top: 4rem;
-    } */
   }
 
   .timeline-item:nth-child(odd) .timeline-item-content {

@@ -9,10 +9,10 @@ function Projetos({ projetos }: IProjetosProps) {
     <Container>
       <SectionTitle title="Últimos Projetos" />
       <section>
-        {projetos.slice(0, 2).map(projeto => (
+        {projetos.slice(0, 4).map(projeto => (
           <ProjetoItem
-            key={projeto.slug}
-            slug={projeto.slug}
+            key={projeto.id}
+            id={projeto.id}
             title={projeto.title}
             type={projeto.type}
             thumbnail={projeto.thumbnail}

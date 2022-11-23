@@ -7,7 +7,7 @@ import { HomeContainer } from '../styles/HomeStyles';
 
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
-import Projetos from '../components/ProjetosHome';
+import ProjetosHome from '../components/ProjetosHome';
 import Conhecimentos from '../components/Conhecimentos';
 import FormContato from '../components/FormContato';
 import Footer from '../components/Footer';
@@ -32,7 +32,7 @@ export default function Home({ projetos, changeMode }: IProjetosProps) {
       <Header changeMode={changeMode} />
       <main className="container">
         <HomeHero />
-        <Projetos projetos={projetos} />
+        <ProjetosHome projetos={projetos} />
         <Conhecimentos />
         <FormContato />
       </main>
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async () => {
   );
 
   const projetos = results.map(projeto => ({
-    slug: projeto.uid,
+    id: projeto.uid,
     title: projeto.data.title,
     type: projeto.data.type,
     description: projeto.data.description,
