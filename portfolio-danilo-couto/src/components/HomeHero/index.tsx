@@ -3,9 +3,7 @@ import { Container, TextContainer } from './styles';
 
 function HomeHero() {
   return (
-    <Container
-    // data-aos="fade-up"
-    >
+    <Container data-aos="fade-up">
       <div>
         <img src="/eu.png" alt="Eu no Alasca" />
         <p> That's me in Alaska</p>

@@ -44,11 +44,11 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
   &:hover {
     > section {
       > div.text {
-        right: -12rem;
+        /* right: -12rem; */
       }
 
       > div.overlay {
-        opacity: 0.4;
+        /* opacity: 0.4; */
       }
     }
 
@@ -65,7 +65,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
     a {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300;
       display: flex;
       align-items: center;
@@ -92,8 +92,8 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
     > div.text {
       position: absolute;
-      top: 3rem;
-      right: -10rem;
+      top: 2rem;
+      /* right: -10rem; */
       transition: 0.5s;
       width: fit-content;
 
@@ -121,14 +121,8 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
 
     > section > div.text {
       text-align: right;
-      right: 0;
-      left: -10rem;
-    }
-
-    &:hover {
-      > section > div.text {
-        left: -12rem;
-      }
+      /* right: 0; */
+      /* left: -10rem; */
     }
   }
 

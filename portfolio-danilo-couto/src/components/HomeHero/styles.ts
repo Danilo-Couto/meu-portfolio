@@ -10,19 +10,16 @@ export const Container = styled.section`
   margin-top: 5rem;
   border-bottom: 3px solid ${({ theme }) => theme.primary};
 
-  > div {
-    /* flex: 4; */
-  }
-
   > div > img {
+    flex: 4;
     /* margin-top: -5rem; */
     object-fit: cover;
-    height: 28rem;
-    width: 70rem;
+    height: 20rem;
+    width: 100%;
   }
 
   > div > p {
-    color: white;
+    color: ${({ theme }) => theme.primary};
   }
 
   button {
@@ -46,16 +43,17 @@ export const Container = styled.section`
   }
 
   @media (max-width: 700px) {
-    flex-direction: column-reverse;
-    > div {
+    flex-direction: column;
+    > section {
       width: 100%;
+      text-align: center;
     }
   }
 `;
 
 export const TextContainer = styled.section`
   margin-bottom: 2rem;
-  width: 100%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
