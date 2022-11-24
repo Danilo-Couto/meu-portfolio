@@ -3,8 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 
@@ -23,7 +21,7 @@ export default createGlobalStyle`
 
   body {
     background: ${props => props.theme.background};
-    font: 400 1rem 'Montserrat', sans-serif;
+    font: 400 1rem;
   }
 
   img {
@@ -59,19 +57,19 @@ export default createGlobalStyle`
     font-weight: 300;
   }
 
-  .container {
+  .home_container {
     width: 100%;
     margin: 0 auto;
-    max-width: 85rem;
+    /* max-width: 85rem; */
     padding: 0 1rem;
     @media(max-width:1450px) {
       max-width: 70rem;
     }
     @media(max-width:1000px) {
-      max-width: 50rem;
+      /* max-width: 50rem; */
     }
     @media(max-width:700px) {
-      padding: 0 2rem;
+      /* padding: 0 2rem; */
     }
   }
 

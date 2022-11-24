@@ -15,24 +15,26 @@ export const Container = styled.header`
 
   ul {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
   }
 
   div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: 1px;
 
     span {
-      font-size: 28px;
+      font-size: 16px;
     }
 
     label {
       position: relative;
       display: inline-block;
-      height: 34px;
+      height: 24px;
       width: 60px;
 
       input {
@@ -55,15 +57,15 @@ export const Container = styled.header`
       background-color: ${({ theme }) => theme.primary};
       bottom: 4px;
       content: '';
-      height: 26px;
+      height: 16px;
+      width: 16px;
       left: 4px;
       position: absolute;
       transition: 0.4s;
-      width: 26px;
     }
 
     input:checked + .slider:before {
-      transform: translateX(26px);
+      transform: translateX(36px);
     }
 
     input:checked + .slider {
@@ -76,6 +78,18 @@ export const Container = styled.header`
 
     .slider.round:before {
       border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 410px) {
+    height: 100%;
+    width: 90%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
   }
 `;

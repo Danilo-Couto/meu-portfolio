@@ -12,9 +12,8 @@ export const Container = styled.section`
 
   > div > img {
     flex: 4;
-    /* margin-top: -5rem; */
     object-fit: cover;
-    height: 20rem;
+    height: 25rem;
     width: 100%;
   }
 
@@ -54,9 +53,9 @@ export const Container = styled.section`
 export const TextContainer = styled.section`
   margin-bottom: 2rem;
   width: 55%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 2rem; */
 
   h1 {
     font-size: 4rem;

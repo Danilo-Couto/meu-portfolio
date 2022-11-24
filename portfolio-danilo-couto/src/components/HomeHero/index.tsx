@@ -6,10 +6,10 @@ function HomeHero() {
     <Container data-aos="fade-up">
       <div>
         <img src="/eu.png" alt="Eu no Alasca" />
-        <p> That's me in Alaska</p>
+        <p> That's me in Alaska ⤴</p>
       </div>
       <TextContainer>
-        <h1>Olá, eu sou o Danilo!</h1>
+        <h1>Olá, eu sou Danilo Couto!</h1>
         <h2>
           Bem vindo ao meu sempre em construção <b> porfólio </b>
         </h2>
