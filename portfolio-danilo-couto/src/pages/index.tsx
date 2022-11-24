@@ -3,7 +3,6 @@ import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import { useRouter } from 'next/router';
-import { HomeContainer } from '../styles/HomeStyles';
 
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
@@ -17,6 +16,7 @@ import { IProjetosProps } from '../interface';
 import LoadingScreen from '../components/LoadingScreen';
 import userData from '../assets/data';
 import HeadComponent from '../components/Head';
+import { HomeContainer } from '../styles/HomeContainer';
 
 export default function Home({ projetos, changeMode }: IProjetosProps) {
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Home({ projetos, changeMode }: IProjetosProps) {
     <HomeContainer>
       <HeadComponent />
       <Header changeMode={changeMode} />
-      <main className="container">
+      <main className="home_container">
         <HomeHero />
         <ProjetosHome projetos={projetos} />
         <Conhecimentos />
